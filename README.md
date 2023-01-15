@@ -8,6 +8,11 @@ The following resources will be created:
 2. Provides network associations for AWS Client VPN endpoints.
 3. A CloudWatch log group to store session logs.
 
+## Pre-requisite
+
+1. Generate server and client certificates. Store them in ACM
+2. Create a VPC with 2 subnets. 1 for client VPN subnet and another for Application instance subnet
+3. Create a Ec2 instance in Application subnet
 
 ## Terraform execution steps
 
@@ -29,21 +34,29 @@ Keep the client certificate ready that we created earlier.
 Open the configuration file with any editor and add the following lines
 
 cert /path/to/client1.crt
+
 key /path/to/client1.key
 
 or
 
 <cert>
+  
 — — -BEGIN CERTIFICATE — — -
+  
 ***Paste Your Cert Text Here***
 
 — — -END CERTIFICATE — — -
+  
 </cert>
+
 <key>
+  
 — — -BEGIN PRIVATE KEY — — -
+  
 ***Paste Your Cert Private Key Here***
 
 — — -END PRIVATE KEY — — -
+  
 </key>
 
 Also, modify the endpoint DNS name by adding a random prefix
@@ -55,6 +68,10 @@ Modified: xxxxxx.cvpn-endpoint-0c2c9d41ee76a29fa.prod.clientvpn.ap-south-1.amazo
 Download OpenVPN Client from https://openvpn.net/community-downloads/
 
 Import the edited VPN configuration file in the OpenVPN client. Click on browse and import the configuration file. The VPN will automatically connect
+
+<img width="226" alt="image" src="https://user-images.githubusercontent.com/65828245/212559913-88fd1eac-c600-4771-aeeb-92b5c032bf06.png">
+
+<img width="218" alt="image" src="https://user-images.githubusercontent.com/65828245/212559939-d0908be1-84e6-4730-bb53-4cb7b8403304.png">
 
 
 ## Requirements
@@ -100,3 +117,5 @@ No modules.
 |------|-------------|
 | <a name="output_clientvpn-id"></a> [clientvpn-id](#output\_clientvpn-id) | n/a |
 | <a name="output_dns-name"></a> [dns-name](#output\_dns-name) | n/a |
+
+Follow [this](https://medium.com/@vanchi811/aws-client-vpn-to-securely-access-aws-resources-in-multiple-vpcs-using-transit-gateway-ce363096cde3) for complete AWS client VPN setup via console
