@@ -1,4 +1,4 @@
-## Terraform code repo for AWS client VPN
+# Terraform code repo for AWS client VPN
 
 This terraform code installs a client vpn.
 
@@ -9,7 +9,7 @@ The following resources will be created:
 3. A CloudWatch log group to store session logs.
 
 
-# Terraform execution steps
+## Terraform execution steps
 
 1. terraform init
 2. terraform validate
@@ -17,10 +17,12 @@ The following resources will be created:
 4. terraform plan
 5. terraform apply
 
-# Download the Client VPN endpoint configuration file
+## Download the Client VPN endpoint configuration file
 
 Now the infrastructure is ready. Now download the client configuration.
-image.png
+
+<img width="508" alt="image" src="https://user-images.githubusercontent.com/65828245/212559795-b03e0522-af30-456c-abf1-974a0c5e1fb4.png">
+
 
 Keep the client certificate ready that we created earlier.
 
