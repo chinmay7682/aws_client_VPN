@@ -1,11 +1,11 @@
 Terraform code repo for AWS client VPN
 
-Terraform execution steps
-terraform init
-terraform validate
-terraform fmt --recursive
-terraform plan
-terraform apply
+1. Terraform execution steps
+2. terraform init
+3. terraform validate
+4. terraform fmt --recursive
+5. terraform plan
+6. terraform apply
 ## Requirements
 
 | Name | Version |
