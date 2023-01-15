@@ -1,12 +1,5 @@
 ## Terraform code repo for AWS client VPN
 
-Terraform execution steps
-1. terraform init
-2. terraform validate
-3. terraform fmt --recursive
-4. terraform plan
-5. terraform apply
-
 This terraform code installs a client vpn.
 
 The following resources will be created:
@@ -14,6 +7,54 @@ The following resources will be created:
 1. VPN Endpoint - Provides an AWS Client VPN endpoint for OpenVPN clients.
 2. Provides network associations for AWS Client VPN endpoints.
 3. A CloudWatch log group to store session logs.
+
+
+# Terraform execution steps
+
+1. terraform init
+2. terraform validate
+3. terraform fmt --recursive
+4. terraform plan
+5. terraform apply
+
+# Download the Client VPN endpoint configuration file
+
+Now the infrastructure is ready. Now download the client configuration.
+image.png
+
+Keep the client certificate ready that we created earlier.
+
+Open the configuration file with any editor and add the following lines
+
+cert /path/to/client1.crt
+key /path/to/client1.key
+
+or
+
+<cert>
+— — -BEGIN CERTIFICATE — — -
+***Paste Your Cert Text Here***
+
+— — -END CERTIFICATE — — -
+</cert>
+<key>
+— — -BEGIN PRIVATE KEY — — -
+***Paste Your Cert Private Key Here***
+
+— — -END PRIVATE KEY — — -
+</key>
+
+Also, modify the endpoint DNS name by adding a random prefix
+
+Original: cvpn-endpoint-0c2c9d41ee76a29fa.prod.clientvpn.ap-south-1.amazonaws.com
+
+Modified: xxxxxx.cvpn-endpoint-0c2c9d41ee76a29fa.prod.clientvpn.ap-south-1.amazonaws.com
+
+Download OpenVPN Client from https://openvpn.net/community-downloads/
+
+Import the edited VPN configuration file in the OpenVPN client. Click on browse and import the configuration file. The VPN will automatically connect
+
+
 ## Requirements
 
 | Name | Version |
