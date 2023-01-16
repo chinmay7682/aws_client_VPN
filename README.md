@@ -132,15 +132,15 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_app_CIDR"></a> [app\_CIDR](#input\_app\_CIDR) | vpn CIDR to host Application Instance which can access by the clients over VPN | `string` | `""` | no |
-| <a name="input_client_cidr_block"></a> [client\_cidr\_block](#input\_client\_cidr\_block) | CIDR of the client network,should be greater than /22 | `any` | `""` | no |
-| <a name="input_root_certificate_chain_arn"></a> [root\_certificate\_chain\_arn](#input\_root\_certificate\_chain\_arn) | arn of client certificate created before and kept in ACM | `string` | `""` | no |
-| <a name="input_server_certificate_arn"></a> [server\_certificate\_arn](#input\_server\_certificate\_arn) | arn of server certificate created before and kept in ACM | `string` | `""` | no |
+| <a name="input_app_CIDR"></a> [app\_CIDR](#input\_app\_CIDR) | vpn CIDR to host Application Instance which can access by the clients over VPN | `string` | `""` | yes |
+| <a name="input_client_cidr_block"></a> [client\_cidr\_block](#input\_client\_cidr\_block) | CIDR of the client network,should be greater than /22 | `any` | `""` | yes |
+| <a name="input_root_certificate_chain_arn"></a> [root\_certificate\_chain\_arn](#input\_root\_certificate\_chain\_arn) | arn of client certificate created before and kept in ACM | `string` | `""` | yes |
+| <a name="input_server_certificate_arn"></a> [server\_certificate\_arn](#input\_server\_certificate\_arn) | arn of server certificate created before and kept in ACM | `string` | `""` | yes |
 | <a name="input_session_timeout_hours"></a> [session\_timeout\_hours](#input\_session\_timeout\_hours) | The maximum session duration is a trigger by which end-users are required to re-authenticate prior to establishing a VPN session.Valid values: 8 \| 10 \| 12 \| 24 | `string` | `"24"` | no |
 | <a name="input_split_tunnel"></a> [split\_tunnel](#input\_split\_tunnel) | Indicates wheather split-tunnel is enabled on VPN endpoint | `bool` | `false` | no |
 | <a name="input_transport_protocol"></a> [transport\_protocol](#input\_transport\_protocol) | The transport protocol to be used by the VPN session | `string` | `"udp"` | no |
-| <a name="input_vpn_CIDR"></a> [vpn\_CIDR](#input\_vpn\_CIDR) | vpn CIDR to associate with the Client VPN endpoint | `string` | `""` | no |
-| <a name="input_vpn_authorization_cidr"></a> [vpn\_authorization\_cidr](#input\_vpn\_authorization\_cidr) | CIDR of the network to which the client will have access to the specified network | `any` | `""` | no |
+| <a name="input_vpn_CIDR"></a> [vpn\_CIDR](#input\_vpn\_CIDR) | vpn CIDR to associate with the Client VPN endpoint | `string` | `""` | yes |
+| <a name="input_vpn_authorization_cidr"></a> [vpn\_authorization\_cidr](#input\_vpn\_authorization\_cidr) | CIDR of the network to which the client will have access to the specified network | `any` | `""` | yes |
 | <a name="input_vpn_port"></a> [vpn\_port](#input\_vpn\_port) | The port number for the Client VPN endpoint. Valid values are 443 and 1194 | `string` | `"443"` | no |
 
 ## Outputs
