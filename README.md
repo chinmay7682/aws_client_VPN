@@ -16,6 +16,7 @@ The following resources will be created:
 1. Generate server and client certificates. Store them in ACM
 2. Create a Ec2 instance in Application subnet
 
+Follow [here](https://medium.com/@vanchi811/aws-client-vpn-to-securely-access-aws-resources-in-multiple-vpcs-using-transit-gateway-ce363096cde3) for Server and Client Certificates creation.
 ___
 ## Terraform execution steps
 
@@ -37,7 +38,12 @@ ___
 
 * To execute the actions proposed in a Terraform plan:
 
+<img width="521" alt="image" src="https://user-images.githubusercontent.com/65828245/212622229-5dc5662c-2ffb-4c24-ab43-3f3973315bde.png"> <img width="581" alt="image" src="https://user-images.githubusercontent.com/65828245/212622082-a42846c4-c4bb-4d30-9723-6d7225e4ea6e.png">
+<img width="574" alt="image" src="https://user-images.githubusercontent.com/65828245/212622460-925b4fa8-a719-4c36-b1ee-5d0d6d320424.png">
+
 <pre><code>terraform apply</pre></code>
+
+<img width="605" alt="image" src="https://user-images.githubusercontent.com/65828245/212623811-8685bd01-1426-4a6b-8bdf-f8619e2c36fb.png">
 
 * To destroy the infrastructure created before by using Terraform:
 
