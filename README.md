@@ -16,13 +16,32 @@ The following resources will be created:
 1. Generate server and client certificates. Store them in ACM
 2. Create a Ec2 instance in Application subnet
 
+___
 ## Terraform execution steps
 
-1. terraform init
-2. terraform validate
-3. terraform fmt --recursive
-4. terraform plan
-5. terraform apply
+* To initialize a working directory containing Terraform configuration files:
+
+<pre><code>terraform init</pre></code>
+
+* To validate the Terraform configuration
+
+<pre><code>terraform validate</pre></code>
+
+* To format your Terraform code 
+
+<pre><code>terraform fmt --recursive</pre></code>
+
+* To create an execution plan, which lets you preview the changes to your infrastructure:
+
+<pre><code>terraform plan</pre></code>
+
+* To execute the actions proposed in a Terraform plan:
+
+<pre><code>terraform apply</pre></code>
+
+* To destroy the infrastructure created before by using Terraform:
+
+<pre><code>terraform destroy</pre></code>
 
 ## Download the Client VPN endpoint configuration file
 
