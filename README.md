@@ -147,8 +147,8 @@ No modules.
 
 | Name | Description |
 |------|-------------|
-| <a name="output_clientvpn-id"></a> [clientvpn-id](#output\_clientvpn-id) | n/a |
-| <a name="output_dns-name"></a> [dns-name](#output\_dns-name) | n/a |
+| <a name="output_clientvpn-id"></a> [clientvpn-id](#output\_clientvpn-id) | The ID of the Client VPN endpoint. |
+| <a name="output_dns-name"></a> [dns-name](#output\_dns-name) | The DNS name to be used by clients when establishing their VPN session. |
 
 For more information on Amazon Client VPN, visit [Amazon Client VPN](https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/what-is.html).
 
