@@ -149,3 +149,7 @@ No modules.
 |------|-------------|
 | <a name="output_clientvpn-id"></a> [clientvpn-id](#output\_clientvpn-id) | n/a |
 | <a name="output_dns-name"></a> [dns-name](#output\_dns-name) | n/a |
+
+For more information on Amazon Client VPN, visit [Amazon Client VPN](https://docs.aws.amazon.com/vpn/latest/clientvpn-admin/what-is.html).
+
+For more information on Terraform AWS Client VPN, visit [Terraform Resource: Client VPN](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/ec2_client_vpn_endpoint).
